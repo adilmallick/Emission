@@ -69,15 +69,19 @@ table{
 
 
 @media only screen and (max-width: 850px) {
+.header{
+  display: grid;
+  place-items: center;
 
+}
 .lists{
     height: 52px;
-    width: 100%;
     background-color: rgb(61, 177, 148);
 }
 
 
 ul{
+    margin-left: 10px;
     width: 100%;
   }
 
@@ -96,6 +100,7 @@ table{
 
 .lists{
   height: 100px;
+  width: 100%;
 }
 
 ul{
