@@ -3,8 +3,6 @@ var selected_gas = 'ozone';
 const table = document.getElementById('highscore');
 var date = new Date().toISOString().slice(0, 10);
 
-
-
 const Guangzhou = '23.1291,113.2644',
       newyork = '40.7128,74.0060',
       tokyo = '35.6762,139.6503',
@@ -28,7 +26,6 @@ const Guangzhou = '23.1291,113.2644',
 
 
 
-
 function adil(gas){
   table.innerHTML = '';
   if(gas == 'm'){
@@ -49,7 +46,6 @@ function adil(gas){
   }
   allinone()
   data();
-  console.log(selected_gas);
 }
 
 function allinone(){
@@ -57,15 +53,12 @@ function allinone(){
         + '/api/v2/' +selected_gas+ '/statistics.json'
         + '?interval=day&begin=' + begin_date + '&end='+ date + '&point=';
 
-
-        urls = [Guangzhou, newyork, tokyo, kolkata, Jakarta, Delhi, Manila, Seoul, Shanghai, Karachi, Beijing, Sao_Paulo, Mexico_City
-         , Mumbai, Kyoto, Moscow, Dhaka, Cairo, Los_Angeles, Bangkok ].map(city => baseurl + city);
+urls = [Guangzhou, newyork, tokyo, kolkata, Jakarta, Delhi, Manila
+        , Seoul, Shanghai, Karachi, Beijing, Sao_Paulo, Mexico_City
+       , Mumbai, Kyoto, Moscow, Dhaka, Cairo, Los_Angeles, Bangkok ].map(city => baseurl + city);
 }
 
-
-
-
-      var data = () => Promise.all(
+var data = () => Promise.all(
           urls.map(url => fetch(url).then(response => response.json()))
         ).then(responses => {
           if(selected_gas != 'methane'){
@@ -125,7 +118,5 @@ function allinone(){
 
           }      
         );
-             
-
-
-            // 0,9,11,15,17
+           
+// 0,9,11,15,17
