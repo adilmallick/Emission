@@ -4,19 +4,16 @@
   /* background-color: black; */
 }
 
-
-
 .top{
   margin-top: 0px;
   width: 100%;
   margin-bottom: 10px;
-
-
 }
 
 .header{
   background-color: rgb(61, 177, 148);
   height: 70px;
+  border: .5px solid rgb(27, 199, 156);
 }
 
 h1{
@@ -31,19 +28,16 @@ h1{
     /* place-items: center; */
 }
 
-
-ul {
+ul{
     list-style-type: none;
     margin-left: 10px;
     padding: 0;
     overflow: hidden;
     position: -webkit-sticky; /* Safari */
     position: sticky;
-
   }
 
-  
-  li{
+li{
     position: sticky;
     font-size: 20px;
     float: left;
@@ -57,11 +51,9 @@ ul {
     /* border: 1px solid white; */
   }
   
-  li:hover {
+li:hover {
     border-bottom: 4px solid rgb(31, 103, 197);
   }
-  
-
 
 .table{
   margin-left: 30px;
@@ -73,5 +65,51 @@ table{
   width: 700px;
   border-bottom: 1px solid white;
   color: rgb(0, 0, 0);
+}
+
+
+@media only screen and (max-width: 850px) {
+
+.lists{
+    height: 52px;
+    width: 100%;
+    background-color: rgb(61, 177, 148);
+}
+
+
+ul{
+    width: 100%;
+  }
+
+  
+li{
+    width: 20%;
+  }
+
+table{
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+.lists{
+  height: 100px;
+}
+
+ul{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2,auto);
+  }
+
+li{
+    width: 50%;
+  }
+
+.table{
+  margin-top: 20px;
+}
 }
 
