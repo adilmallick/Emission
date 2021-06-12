@@ -77,6 +77,14 @@ li{
   width: 20%;
 }
 
+.header{
+  display: grid;
+  place-items: center;
+}
+
+h1{
+  margin-left: 0;
+}
 }
 
 @media only screen and (max-width: 650px) {
@@ -96,5 +104,11 @@ li{
   margin-top: 15px;
 }
 
+}
+
+@media only screen and (max-width: 280px) {
+    h1{
+      font-size: 25px;
+    }
 }
 
