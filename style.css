@@ -69,52 +69,32 @@ table{
 
 
 @media only screen and (max-width: 850px) {
-.header{
-  display: grid;
-  place-items: center;
-
-}
-.lists{
-    height: 52px;
-    background-color: rgb(61, 177, 148);
-}
-
-
-ul{
-    margin-left: 10px;
-    width: 100%;
-  }
-
-  
-li{
-    width: 20%;
-  }
-
 table{
-    width: 100%;
-  }
+  width: 100%;
+}
+
+li{
+  width: 20%;
+}
 
 }
 
 @media only screen and (max-width: 650px) {
-
+ul{
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2,auto);
+}
 .lists{
   height: 100px;
-  width: 100%;
 }
-
-ul{
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(2,auto);
-  }
-
 li{
-    width: 50%;
-  }
+  width: 50%;
+}
 
 .table{
-  margin-top: 20px;
+  margin-top: 15px;
 }
+
 }
 
