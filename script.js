@@ -27,23 +27,32 @@ const Guangzhou = '23.1291,113.2644',
 
 
 function adil(gas){
+  var x = document.querySelectorAll("li");
   table.innerHTML = '';
+  for(i=0;i<4;i++){
+    x[i].classList.remove("li-click");
+  }
   if(gas == 'm'){
     selected_gas = 'methane';
     begin_date = '2020-12-05';
+    x[1].classList.add("li-click");
   }
   else if(gas == 'o'){
     selected_gas = 'ozone';
     begin_date = '2021-6-08';
+    x[0].classList.add("li-click");
   }
   else if(gas == 'c'){
     selected_gas = 'carbonmonoxide';
     begin_date = '2021-6-08';
+    x[2].classList.add("li-click");
   }
   else if(gas == 'n'){
     selected_gas = 'nitrogendioxide';
     begin_date = '2021-06-02';
+    x[3].classList.add("li-click");
   }
+
   allinone()
   data();
 }
@@ -118,5 +127,10 @@ var data = () => Promise.all(
 
           }      
         );
+
+window.onload = function (){
+      adil('o');
+          };
+      
            
 // 0,9,11,15,17
