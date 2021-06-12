@@ -52,7 +52,7 @@ li{
   }
   
 li:hover {
-    border-bottom: 4px solid rgb(31, 103, 197);
+/*     border-bottom: 4px solid rgb(31, 103, 197); */
   }
 
 .table{
