@@ -68,7 +68,11 @@ urls = [Guangzhou, newyork, tokyo, kolkata, Jakarta, Delhi, Manila
 }
 
 var data = () => Promise.all(
-          urls.map(url => fetch(url).then(response => response.json()))
+          urls.map(url => fetch(url,
+          {
+            "method": "GET",
+            "headers": {}
+          }).then(response => response.json()))
         ).then(responses => {
           if(selected_gas != 'methane'){
             [
