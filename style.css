@@ -28,6 +28,10 @@ h1{
     /* place-items: center; */
 }
 
+.li-click{
+  border-bottom: 4px solid rgb(31, 103, 197);
+}
+
 ul{
     list-style-type: none;
     margin-left: 10px;
@@ -52,8 +56,8 @@ li{
   }
   
 li:hover {
-/*     border-bottom: 4px solid rgb(31, 103, 197); */
-           font-weight: bold;
+    /* border-bottom: 4px solid rgb(31, 103, 197); */
+    font-weight: bold;
   }
 
 .table{
@@ -91,14 +95,18 @@ h1{
 @media only screen and (max-width: 650px) {
 ul{
   display: grid;
+  width: 100%;
   place-items: center;
   grid-template-columns: repeat(2,auto);
+  position: fixed;
 }
 .lists{
   height: 100px;
 }
 li{
   width: 50%;
+  position: sticky;
+  top: 0;
 }
 
 .table{
