@@ -134,7 +134,6 @@ var data = () => Promise.all(
 
 window.onload = function (){
       adil('o');
-      x[0].classList.add("li-click");
           };
       
            
